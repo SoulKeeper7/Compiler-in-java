@@ -7,16 +7,19 @@ public class LHS extends ASTNode{
 	public final String name;
 	public final Index index;
 
-
+	boolean isCartesian;
+	public Declaration declara;
 
 	public LHS(Token firstToken, Token name, Index index) {
 		super(firstToken);
 		this.name = name.getText();
 		this.index = index;
+		this.declara=null;
 	}
 
 	@Override
-	public Object visit(ASTVisitor v, Object arg) throws Exception {
+	public Object visit(ASTVisitor v, Object arg) throws Exception 
+	{
 		return v.visitLHS(this,arg);
 	}
 
@@ -62,6 +65,15 @@ public class LHS extends ASTNode{
 		return builder.toString();
 	}
 
+	public boolean isCartesian() {
+		return isCartesian;
+	}
+
+
+
+	public void setCartesian(boolean isCartesian) {
+		this.isCartesian = isCartesian;
+	}
 
 	
 	

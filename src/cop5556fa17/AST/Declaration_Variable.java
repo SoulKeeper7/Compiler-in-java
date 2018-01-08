@@ -9,7 +9,6 @@ public class Declaration_Variable extends Declaration {
 	public final Token type;
 	public final String name;
 	public final Expression e;
-	
 
 	public Declaration_Variable(Token firstToken,  Token type, Token name, Expression e) {
 		super(firstToken);

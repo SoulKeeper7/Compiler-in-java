@@ -707,9 +707,11 @@ public class Parser {
 					Statement_Out  x = imageOutStatement(toadd);
 					return x;
 				}
+				deconsume();
 			}
+			
 					
-			deconsume();
+			
 			
 			if(checkFirst.Assignment.contains(t.kind) &&t.kind.equals(IDENTIFIER))
 			{
@@ -791,6 +793,7 @@ public class Parser {
 		
 	}
 
+	
 	public Statement_Assign assignmentStatement(Token tmp) throws SyntaxException {
 		// TODO Auto-generated method stub
 		//Lhs OP_ASSIGN Expression
@@ -798,7 +801,7 @@ public class Parser {
 		{
 			consume();
 			LHS x= lhs(tmp);
-			//consume();
+			consume();
 			if(t.kind.equals(OP_ASSIGN))
 			{
 				consume();
@@ -825,7 +828,7 @@ public class Parser {
 				if(t.kind.equals(LSQUARE))
 				{
 					Index y = lhsSelector();
-					//consume();
+					consume();
 					if(t.kind.equals(RSQUARE))
 					{
 						return new LHS(tmp,tmp,y);
@@ -834,9 +837,10 @@ public class Parser {
 			}
 			else
 			{
-				//deconsume();
+				deconsume();
 				return new LHS(tmp,tmp,null);
 			}
+			deconsume();
 			throw new SyntaxException(t,"Excetion lhs");
 		}
 		//return false;
@@ -910,7 +914,7 @@ public class Parser {
 			if(t.kind.equals(COMMA))
 			{
 				consume();
-				if(t.kind.equals(KW_A))
+				if(t.kind.equals(KW_a))
 				{
 					Expression kwa = new Expression_PredefinedName(t,t.kind);
 					return new Index(tmp,kwr,kwa);

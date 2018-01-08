@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="cop5556fa17/OldCodeGenVisitor.java|cop5556fa17/OldCodeGenVisitorTest.java|cop5556fa17/CodeGenVisitorTest.java|cop5556fa17/Functions.java|cop5556fa17/CodeGenVisitor.java|cop5556fa17/CodeGenUtils.java|cop5556fa17/image/|cop5556fa17/Sample.java|cop5556fa17/LexicalException.java|cop5556fa17/SymbolTable.java" kind="src" path="cop5556fa17/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Users/Beverly/Documents/teaching/cop5556fa17/asm-6.0_BETA/lib/asm-6.0_BETA.jar" sourcepath="C:/Users/Beverly/Documents/teaching/cop5556fa17/asm-6.0_BETA/src.zip"/>
+	<classpathentry kind="lib" path="C:/Users/Beverly/Documents/teaching/cop5556fa17/asm-6.0_BETA/lib/asm-util-6.0_BETA.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

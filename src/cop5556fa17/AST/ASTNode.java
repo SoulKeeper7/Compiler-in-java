@@ -1,14 +1,17 @@
 package cop5556fa17.AST;
 
 import cop5556fa17.Scanner.Token;
+import cop5556fa17.TypeUtils.Type;
 
 public abstract class ASTNode {
 	
 	final public Token firstToken;
+	 public Type attrType;
 	
 	public ASTNode(Token firstToken) {
 		super();
 		this.firstToken = firstToken;
+		this.attrType=null;
 	}
 
 	public abstract Object visit(ASTVisitor v, Object arg) throws Exception;

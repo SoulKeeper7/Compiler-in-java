@@ -8,6 +8,7 @@ public class Declaration_Image extends Declaration {
 	public final Expression ySize;
 	public final String name;
 	public final Source source;
+	
 
 	public Declaration_Image(Token firstToken, Expression xSize, Expression ySize, Token name,
 			Source source) {
